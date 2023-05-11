@@ -18,6 +18,7 @@ public class User {
         this.email = email;
     }
     public User(String email, String login) {
+        validateParameters(email, login);
         this.email = email;
         this.login = login;
     }
@@ -54,7 +55,7 @@ public class User {
         }
     }
 
-    public void validateParametres (String login, String email) {
+    public void validateParameters (String login, String email) {
         validateLogin(login);
         validateEmail(email);
         if (login.equals(email)) {
